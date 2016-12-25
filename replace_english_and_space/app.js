@@ -27,6 +27,12 @@ fs.readFile(input, 'utf8', (err, data) => {
   // 替换 ,
   console.log('替换 ,');
   tmp = tmp.replace(/,/g, '，');
+  // 替换 ......
+  console.log('替换 ......');
+  tmp = tmp.replace(/(\.\.\.\.\.\.)+/g, '······');
+  // 替换 ...
+  console.log('替换 ...');
+  tmp = tmp.replace(/(\.\.\.)+/g, '······');
   // 替换 .
   console.log('替换 .');
   tmp = tmp.replace(/\./g, '。');
